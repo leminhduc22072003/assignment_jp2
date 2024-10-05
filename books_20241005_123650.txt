@@ -1,0 +1,126 @@
+ID: 11
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Release Date: 1925-04-10
+Content: A novel about the American dream and the disillusionment that comes with it.
+----------------------------------------
+ID: 12
+Title: To Kill a Mockingbird
+Author: Harper Lee
+Release Date: 1960-07-11
+Content: A novel about the serious issues of rape and racial inequality.
+----------------------------------------
+ID: 13
+Title: 1984
+Author: George Orwell
+Release Date: 1979-06-08
+Content: A dystopian novel set in a totalitarian society ruled by Big Brother.
+----------------------------------------
+ID: 14
+Title: Pride and Prejudice
+Author: Jane Austen
+Release Date: 1913-01-28
+Content: A romantic novel that critiques the British landed gentry at the end of the 18th century.
+----------------------------------------
+ID: 15
+Title: The Catcher in the Rye
+Author: J.D. Salinger
+Release Date: 1951-07-16
+Content: A novel that explores the themes of teenage angst and alienation.
+----------------------------------------
+ID: 16
+Title: The Hobbit
+Author: J.R.R. Tolkien
+Release Date: 1937-09-21
+Content: A fantasy novel about the adventures of Bilbo Baggins, a hobbit.
+----------------------------------------
+ID: 17
+Title: Moby-Dick
+Author: Herman Melville
+Release Date: 1951-10-18
+Content: A novel about the obsessive quest of Ahab for revenge on Moby Dick, the giant whale.
+----------------------------------------
+ID: 18
+Title: War and Peace
+Author: Leo Tolstoy
+Release Date: 1969-01-01
+Content: A historical novel that chronicles the French invasion of Russia.
+----------------------------------------
+ID: 19
+Title: The Odyssey
+Author: Homer
+Release Date: 1979-01-10
+Content: An epic poem that tells the story of Odysseus’s journey home after the Trojan War.
+----------------------------------------
+ID: 20
+Title: The Alchemist
+Author: Paulo Coelho
+Release Date: 1988-01-01
+Content: A philosophical book that follows a shepherd named Santiago on his journey to find treasure.
+----------------------------------------
+ID: 32
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Release Date: 1925-04-10
+Content: A novel about the American dream and the disillusionment that comes with it.
+----------------------------------------
+ID: 33
+Title: To Kill a Mockingbird
+Author: Harper Lee
+Release Date: 1960-07-11
+Content: A novel about the serious issues of rape and racial inequality.
+----------------------------------------
+ID: 34
+Title: 1984
+Author: George Orwell
+Release Date: 1949-06-08
+Content: A dystopian novel set in a totalitarian society ruled by Big Brother.
+----------------------------------------
+ID: 35
+Title: Pride and Prejudice
+Author: Jane Austen
+Release Date: 1813-01-28
+Content: A romantic novel that critiques the British landed gentry at the end of the 18th century.
+----------------------------------------
+ID: 36
+Title: The Catcher in the Rye
+Author: J.D. Salinger
+Release Date: 1951-07-16
+Content: A novel that explores the themes of teenage angst and alienation.
+----------------------------------------
+ID: 37
+Title: The Hobbit
+Author: J.R.R. Tolkien
+Release Date: 1937-09-21
+Content: A fantasy novel about the adventures of Bilbo Baggins, a hobbit.
+----------------------------------------
+ID: 38
+Title: Moby-Dick
+Author: Herman Melville
+Release Date: 1851-10-18
+Content: A novel about the obsessive quest of Ahab for revenge on Moby Dick, the giant whale.
+----------------------------------------
+ID: 39
+Title: War and Peace
+Author: Leo Tolstoy
+Release Date: 1869-01-01
+Content: A historical novel that chronicles the French invasion of Russia.
+----------------------------------------
+ID: 40
+Title: The Odyssey
+Author: Homer
+Release Date: 1869-01-01
+Content: An epic poem that tells the story of Odysseus’s journey home after the Trojan War.
+----------------------------------------
+ID: 41
+Title: The Alchemist
+Author: Paulo Coelho
+Release Date: 1988-01-01
+Content: A philosophical book that follows a shepherd named Santiago on his journey to find treasure.
+----------------------------------------
+ID: 42
+Title: hehe
+Author: Quoc
+Release Date: 2024-10-15
+Content: null
+----------------------------------------

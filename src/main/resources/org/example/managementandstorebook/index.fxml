@@ -15,6 +15,7 @@
         <HBox spacing="10">
             <Button text="Save" onAction="#saveBook" />
             <Button text="Cancel" onAction="#clearForm" />
+            <Button text="Export to TXT" onAction="#exportBooksToTxt" />
         </HBox>
     </VBox>
 

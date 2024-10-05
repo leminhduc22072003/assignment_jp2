@@ -25,7 +25,7 @@ public class DatabaseConnection {
 
     public static List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
-        String sql = "SELECT id, title, author, release_date FROM Book";
+        String sql = "SELECT id, title, author, release_date, content FROM Book";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -37,8 +37,9 @@ public class DatabaseConnection {
                 String title = rs.getString("title");
                 String author = rs.getString("author");
                 LocalDate releaseDate = rs.getDate("release_date").toLocalDate();
+                String content = rs.getString("content");
 
-                Book book = new Book(id, title, author, releaseDate);
+                Book book = new Book(id, title, author, releaseDate, content);
                 books.add(book);
             }
         } catch (SQLException e) {
@@ -68,6 +69,31 @@ public class DatabaseConnection {
             System.out.println("Add new book failed: " + e.getMessage());
         }
     }
+
+    public static void editBook(Book book) {
+        String sql = "UPDATE Book SET title = ?, author = ?, release_date = ?, content = ? WHERE id = ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, book.getTitle());
+            pstmt.setString(2, book.getAuthor());
+            pstmt.setDate(3, java.sql.Date.valueOf(book.getReleaseDate()));
+            pstmt.setString(4, book.getContent());
+            pstmt.setInt(5, book.getId());
+
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Update success.");
+            } else {
+                System.out.println("No book found with the specified ID.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Edit book failed: " + e.getMessage());
+        }
+    }
+
+
 
     public static void deleteBook(int id) {
         String sql = "DELETE FROM Book WHERE id = ?";

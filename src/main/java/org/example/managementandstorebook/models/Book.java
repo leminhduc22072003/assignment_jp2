@@ -10,11 +10,12 @@ public class Book {
 
     private String content;
 
-    public Book(int id, String title, String author, LocalDate releaseDate) {
+    public Book(int id, String title, String author, LocalDate releaseDate, String content) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.releaseDate = releaseDate;
+        this.content = content;
     }
 
     public Book(String title, String author, LocalDate releaseDate, String content) {

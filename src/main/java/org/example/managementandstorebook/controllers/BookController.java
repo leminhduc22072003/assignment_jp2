@@ -10,7 +10,12 @@ import org.example.managementandstorebook.database.DatabaseConnection;
 import org.example.managementandstorebook.models.Book;
 import javafx.collections.ObservableList;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class BookController {
@@ -90,11 +95,8 @@ public class BookController {
             addBook(newBook);
 
         } else {
-            Book selectedBook = tableBooks.getSelectionModel().getSelectedItem();
-            selectedBook.setTitle(title);
-            selectedBook.setAuthor(author);
-            selectedBook.setReleaseDate(releaseDate);
-            selectedBook.setContent(content);
+            Book editBook = new Book(title, author, releaseDate, content);
+            DatabaseConnection.editBook(editBook);
             tableBooks.refresh();
         }
         clearForm();
@@ -115,7 +117,29 @@ public class BookController {
     public void addBook(Book book) {
         DatabaseConnection.addBook(book);
         bookList.add(book);
-        clearForm();
+    }
+
+
+    @FXML
+    private void exportBooksToTxt() {
+        List<Book> books = DatabaseConnection.getAllBooks();
+
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+        String fileName = "books_" + timestamp + ".txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (Book book : books) {
+                writer.write("ID: " + book.getId() + "\n");
+                writer.write("Title: " + book.getTitle() + "\n");
+                writer.write("Author: " + book.getAuthor() + "\n");
+                writer.write("Release Date: " + book.getReleaseDate() + "\n");
+                writer.write("Content: " + book.getContent() + "\n");
+                writer.write("----------------------------------------\n");
+            }
+            System.out.println("Export success. File: " + fileName);
+        } catch (IOException e) {
+            System.out.println("Export failed: " + e.getMessage());
+        }
     }
 
     private void loadBooksFromDatabase() {
