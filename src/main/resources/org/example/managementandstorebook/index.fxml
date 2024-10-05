@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.managementandstorebook.controllers.BookController" spacing="10" alignment="CENTER">
+
+    <VBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtId" promptText="ID" editable="false" />
+        <TextField fx:id="txtTitle" promptText="Title" />
+        <TextField fx:id="txtAuthor" promptText="Author" />
+        <DatePicker fx:id="dateReleaseDate" promptText="Release Date" />
+        <TextArea fx:id="txtContent" promptText="Content" prefHeight="100" prefWidth="400" />
+        <HBox spacing="10">
+            <Button text="Save" onAction="#saveBook" />
+            <Button text="Cancel" onAction="#clearForm" />
+        </HBox>
+    </VBox>
+
+    <Separator />
+
+    <TableView fx:id="tableBooks" prefHeight="400" prefWidth="600" VBox.vgrow="ALWAYS" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+            <TableColumn fx:id="colTitle" text="Title" prefWidth="200" />
+            <TableColumn fx:id="colAuthor" text="Author" prefWidth="150" />
+            <TableColumn fx:id="colReleaseDate" text="Release Date" prefWidth="100" />
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="100" />
+        </columns>
+    </TableView>
+</VBox>
