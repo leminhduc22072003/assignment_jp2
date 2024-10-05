@@ -80,6 +80,11 @@ public class BookController {
 
     @FXML
     private void saveBook() {
+        Integer id = null;
+        if (!txtId.getText().isEmpty()) {
+            id = Integer.parseInt(txtId.getText());
+        }
+        
         String title = txtTitle.getText();
         String author = txtAuthor.getText();
         LocalDate releaseDate = dateReleaseDate.getValue();
@@ -90,12 +95,12 @@ public class BookController {
             return;
         }
 
-        if (txtId.getText().isEmpty()) {
+        if (id == null) {
             Book newBook = new Book(title, author, releaseDate, content);
             addBook(newBook);
 
         } else {
-            Book editBook = new Book(title, author, releaseDate, content);
+            Book editBook = new Book(id, title, author, releaseDate, content);
             DatabaseConnection.editBook(editBook);
             tableBooks.refresh();
         }
